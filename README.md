@@ -37,5 +37,14 @@ This command starts the Docker containers defined in the docker-compose.yml file
 ### Access the Application
 The frontend can be accessed at http://localhost:80.<br />
 Backend endpoints:<br />
-http://localhost/api/
-http://localhost/api/goals
+http://localhost/api/<br />
+http://localhost/api/goals<br />
+
+
+### Scalability:
+
+The Docker image can be pushed to any container registry like Docker Hub or ECR. Using a container orchestration tool like Kubernetes, we can scale it. For example, we can create a deployment.yml file and then use this command to manually scale pods:<br /> kubectl scale deployment my-app --replicas=5<br />. Additionally, we can use HPA (Horizontal Pod Autoscaler), and along with the metrics server, the pods can scale based on load.
+
+### Security:
+
+Official Docker images were used, and the containers were not run as root users. Passwords were handled using environment variables. For best practices, we can leverage cloud services like AWS Secrets Manager to handle secrets.
