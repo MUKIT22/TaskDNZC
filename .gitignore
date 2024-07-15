@@ -1,0 +1,17 @@
+# Node.js dependencies
+/node_modules
+
+# Compiled binary addons (if any)
+/build/Release
+
+# Logs
+*.log
+
+# Environment variables
+/env/
+
+# Docker
+.dockerignore
+
+# Docker Compose
+docker-compose.override.yml
